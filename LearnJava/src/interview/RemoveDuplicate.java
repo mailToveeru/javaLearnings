@@ -1,5 +1,8 @@
 package interview;
 
+import java.util.HashMap;
+import java.util.Iterator;
+
 public class RemoveDuplicate {
 
 	public static void main(String[] args) {
@@ -42,28 +45,28 @@ public class RemoveDuplicate {
 //	
 //	}
 	
-	int [] array1 = new int[] {3,2,1,4,6,7,10};
-	
-	int max = array1[0];
-	
-	for(int i=1;i<array1.length;i++) {
-		
-		for(int j=i+1;j<array1.length;j++) {
-			
-			
-			if(array1[i]<array1[j]) {
-				
-				max = array1[j];
-				
-			}
-		}
-		
-	}
-	
-	System.out.println("Maximum number : " + max);
-	
-	
-	}
+//	int [] array1 = new int[] {3,2,1,4,6,7,10};
+//	
+//	int max = array1[0];
+//	
+//	for(int i=1;i<array1.length;i++) {
+//		
+//		for(int j=i+1;j<array1.length;j++) {
+//			
+//			
+//			if(array1[i]<array1[j]) {
+//				
+//				max = array1[j];
+//				
+//			}
+//		}
+//		
+//	}
+//	
+//	System.out.println("Maximum number : " + max);
+//	
+//	
+//	}
 	
 	
 //	<h3 class="text-xl text-skin-bold font-semibold"> Login / Register</h3>
@@ -83,20 +86,41 @@ public class RemoveDuplicate {
 //	
 //	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	    //To find frequency of each element in an array
 
+		// Example array
+	    int[] array = {4, 5, 6, 7, 4, 6, 8, 4, 6};
+	    
+	    
+	    HashMap<Integer, Integer> map = new HashMap<>();
+	  
+	    
+	    //To iterate element in an array
+	  for (int num : array) {
+		
+		  map.put(num, map.getOrDefault(num, 0) + 1);
+	  }
+	  
+	  
+	  for(int key :map.keySet()) {
+		  
+		  System.out.println("Element : "+key+", frequency of an element: "+ map.get(key));
+	  }
+	  
+	}
 }
+	  
+	    
+	    
+	    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
